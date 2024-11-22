@@ -1,0 +1,50 @@
+body {
+    background-color: #ffff;
+    margin: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.tabla-periodica {
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.elemento-periodico {
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.no-metales .interior-elemento {
+    background: #202e38;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.elemento-periodico .titulo {
+    font: 700 26.1538px "Poppins",sans-serief;
+    margin: 0.3em 0 0;
+    transition: 0.8s ease 600ms;
+}
+
+.elemento-periodico .descripcion {
+    font: 500 12px "Poppins",sans-serief;
+    margin-top: -0.2em;
+}
+
+.elemento-periodico:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
