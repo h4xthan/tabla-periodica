@@ -3,19 +3,27 @@ body {
     margin: 100px;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../fuentes/Inter-VariableFont_opsz_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 a{
     text-decoration: none;
 }
 
 .tabla-periodica {
     display: grid;
-    grid-template-columns: repeat(9, 100px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(18, 60px); /* 18 columnas */
+    grid-template-rows: repeat(10, 60px); /* 10 filas, incluyendo lantanidos/actínidos */
     grid-gap: 10px;
     margin: auto;
     max-width: 1200px;
     justify-content: center;
 }
+
 
 .elemento-periodico {
     padding: 4px;
@@ -26,25 +34,169 @@ a{
 }
 
 .no-metales .interior-elemento {
-    background: #202e38;
+    background: rgb(255,214,0);
+    background: linear-gradient(149deg, rgba(255,214,0,1) 0%, rgba(255,158,0,1) 50%, rgba(255,111,0,1) 100%); 
     padding: 10px 15px;
     width: calc(100% - 30px);
     height: calc(100% - 20px);
     transition: inherit;
 }
 
+.metales-alcalinos .interior-elemento {
+    background: rgb(5,0,142);
+    background: linear-gradient(149deg, rgba(5,0,142,1) 0%, rgba(0,16,130,1) 50%, rgba(0,0,51,1) 100%); 
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.alcalinoterreos .interior-elemento {
+    background: rgb(255,226,0);
+    background: linear-gradient(149deg, rgba(255,226,0,1) 0%, rgba(255,192,0,1) 50%, rgba(255,162,0,1) 100%); 
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.otros-metales .interior-elemento {
+    background: rgb(166,0,255);
+    background: linear-gradient(149deg, rgba(166,0,255,1) 0%, rgba(92,0,167,1) 50%, rgba(75,0,131,1) 100%); 
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.metales-transicion .interior-elemento {
+    background: rgb(0,249,255);
+    background: linear-gradient(149deg, rgba(0,249,255,1) 0%, rgba(0,164,255,1) 50%, rgba(0,83,196,1) 100%); 
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.lantanidos .interior-elemento {
+    background: rgb(168,255,0);
+    background: linear-gradient(149deg, rgba(168,255,0,1) 0%, rgba(163,224,0,1) 50%, rgba(99,150,0,1) 100%); 
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.actinidos .interior-elemento {
+    background: rgb(0,255,145);
+    background: linear-gradient(149deg, rgba(0,255,145,1) 0%, rgba(0,224,124,1) 51%, rgba(0,150,123,1) 100%);
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.metaloides .interior-elemento {
+    background: rgb(255,147,147);
+    background: linear-gradient(149deg, rgba(255,147,147,1) 0%, rgba(255,67,67,1) 50%, rgba(195,12,12,1) 100%);
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.halogenos .interior-elemento {
+    background: rgb(170,231,94);
+    background: linear-gradient(149deg, rgba(170,231,94,1) 0%, rgba(97,255,38,1) 50%, rgba(72,210,11,1) 100%);
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+.gases-nobles .interior-elemento {
+    background: rgb(88,221,81);
+    background: linear-gradient(149deg, rgba(88,221,81,1) 0%, rgba(68,200,19,1) 50%, rgba(51,166,0,1) 100%); 
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    transition: inherit;
+}
+
+
+
 .elemento-periodico .titulo {
-    font: 700 26.1538px "Poppins",sans-serief;
+    font: 700 26.1538px "Inter",sans-serif;
     margin: 0.3em 0 0;
     transition: 0.8s ease 600ms;
 }
 
 .elemento-periodico .descripcion {
-    font: 500 12px "Poppins",sans-serief;
+    font: 500 12px "Inter",sans-serif;
     margin-top: -0.2em;
 }
 
-.elemento-periodico:hover {
+.no-metales:hover {
     transform: scale(1.12);
     z-index: 10;
+}
+
+.metales-alcalinos:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.alcalinoterreos:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.otros-metales:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.metales-transicion:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.lantanidos:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.actinidos:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.metaloides:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.halogenos:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.gases-nobles:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.otros-metales:hover {
+    transform: scale(1.12);
+    z-index: 10;
+}
+
+.espacio-1 {
+    grid-column: 3/span 4;
+    grid-row: 1100;
+}
+
+.espacio-2 {
+    grid-column: 1;
+    grid-row: 9;
 }
